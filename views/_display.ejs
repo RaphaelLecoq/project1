@@ -1,0 +1,41 @@
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="ID">ID</label>
+  <div class="col-sm-3">
+    <input readonly type="number" class="form-control" name="id" value="<%= model.cusid %>" min="1"/>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="firstName">First name</label>
+  <div class="col-sm-3">
+    <input readonly class="form-control" name="firstname" value="<%= model.cusfname %>" />
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="lastName">Last name</label>
+  <div class="col-sm-3">
+    <input readonly class="form-control" name="lastname" value="<%= model.cuslname %>" />
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="state">State</label>
+  <div class="col-sm-3">
+    <input readonly class="form-control" name="state" maxlength="2" pattern="[A-Za-z]{2}" value="<%= model.cusstate %>"/>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="sales">Sales YTD</label>
+  <div class="col-sm-3">
+    <input readonly type="number" class="form-control" name="sales" value="<%= model.cussalesytd ? model.cussalesytd.replace(/[^0-9.]/g, '') : '' %>"/>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-form-label col-sm-2" for="previous">Previous years Sales</label>
+  <div class="col-sm-3">
+    <input readonly type="number" class="form-control" name="previous" value="<%= model.cussalesprev ? parseFloat(model.cussalesprev.replace(/[^0-9.-]+/g, '')) : '' %>"/>
+  </div>
+</div>

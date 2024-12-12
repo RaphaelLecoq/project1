@@ -1,0 +1,18 @@
+<%- include("_header") -%>
+
+<h1>Customer Export</h1>
+<p>Total number of records in the database: <%= model %></p>
+<p>Enter a file name and click "Export Customers"</p>
+
+<form action="/export" method="post">
+  <div class="form-group row">
+    <label class="col-form-label col-sm-2" for="filetName">File Name</label>
+    <div class="col-sm-3">
+      <input class="form-control" name="filetName" value="export.txt" />
+    </div>
+  </div>
+  <input type="submit" id="submit" value="Export Customers" class="btn btn-success">
+</form>
+
+<hr>
+<%- include("_footer") -%>

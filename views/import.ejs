@@ -1,0 +1,19 @@
+<%- include("_header") -%>
+
+<h1>Customer import</h1>
+<p>Total number of records in the database: <%= model %></p> <br>
+<p>Select a file with customers for database insert</p>
+<form id="form">
+  <input type="file" name="filename" required><p></p>
+  <input type="submit" value="Import Customers" class="btn btn-default btn-success">
+</form><br>
+
+<div id="loading" style="display: none;">
+  <p class="display-4">Wait for results</p>
+</div>
+<p id="result"></p>
+
+<script src="/import.js"></script>
+
+<hr>
+<%- include("_footer") -%>
